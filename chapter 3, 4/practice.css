@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+#fixed {
+    position: fixed;
+    display: inline-block;
+    top: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.center-align {                /* 가운데 정렬을 위한 CSS 코드 */
+    margin: 0 auto;
+    width: 1080px;          /* 'px'를 적을 때 숫자와 띄어쓰기 해서 적으면 적용이 안됨! 붙여서 적어야 함..*/
+}
+
+div#header-search h1{
+    width: 280px;           /* 이 width는 '네이버' 글자에 적용됨 */
+    display: inline-block;
+    background: url(./NAVER\ background\ image\ 1.png) 0 -158px no-repeat;
+    width: 222px;           /* 이 width는 네이버 'logo'가 들어갈 자리에 적용됨(순서를 보라) */
+    height: 52px;
+    text-indent: -50%;
+    overflow: hidden;
+    background-size: 457px 434px;
+    vertical-align: middle;
+    position: relative;
+    top: -6px;
+    right: 2px;
+}
+
+div#header-search > h2{
+    display: none;
+}
+
+div#header-search > fieldset{
+    width: 585.97px;
+    height: 55.97px;
+    margin-left: 20px;
+    padding: 12px 0 12px 10px;           /* top right left bottom 순으로 px를 적어주었다.*/
+    border: 2px solid #03cf5d;            
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+div#header-search > fieldset input{
+    border: none;
+    padding: 0;
+    outline: none;
+    width: 444px; 
+    height: 24px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div#header-search fieldset button{
+    width: 56px;
+    height: 56px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+    position: absolute;
+    right: -57px;
+    top: -2px;
+}
+
+#search-image{
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
+    background-position: -420px 0;
+    background-size: 457px 434px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li span:first-child{
+    background-image: url(sp_nav.png);
+    height: 16px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 12px;
+}
+
+nav li:first-child span.nav-item-mail {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0px;
+}
+
+nav li:nth-child(2) span:first-child{
+    width: 27px;
+    background-position: -279px -52px;    
+}
+
+nav li:nth-child(3) span:first-child{
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child{
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child{
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:last-child span:first-child{
+    width: 25px;
+    background-position: -70px -285px;
+}
+
+

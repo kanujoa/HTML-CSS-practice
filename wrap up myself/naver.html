@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta />
+    <title>네이버</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./네이버 favicon.ico" />
+    <!--'rel'과 'type'은 favicon이라는 것을 알려주는 것이고
+    href는 favicon의 경로-->
+    <link rel = "stylesheet" href = "./webfont.css">     <!-- 주목 -->
+    <style>     /* 주목, 전체적으로 공통되게 적용되는 CSS를 이 style tag 안에 넣어줄 수 있음. 이렇게 하면 바로 아래 태그처럼 적혀진 CSS 경로를 통해 파일을 가지고 오는 것보다 로딩 시간을 줄일 수 있어 권장함. */
+        * {     /* 여기에서도 CSS 우선 순위가 적용됨! 아래 경로를 적어 놓은 CSS 파일의 순위가 지금 이 style tag에 있는 CSS 보다 더 높음. 아래에 있는 것이 더 우선순위 */
+            box-sizing: border-box;
+        }
+    
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
+        }
+    
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+    
+        .inline-block {
+            display: inline-block;
+        }
+    
+        .float-left {
+            float: left;
+        }
+    </style>
+    <link rel="stylesheet" href="./naver.css" />          <!-- 주목, CSS가 너무 길어졌을 경우 CSS 파일을 여러개 만들어서 옆 코드처럼 경로만 각각 다르게 해서 불러오기 -->
+</head>
+
+<body>
+    <!--div style = "height: 20px; margin-bottom: 20px; background: yellow;"-->
+        <!--div style = "height: 20px; margin-top: 20px; background: green;"></div-->
+    <header>
+        <!--<div id="fixed">고정</div>-->
+        <div class="center-align">
+            <div id="header-top">
+                <span>네이버를 시작페이지로 > | </span>
+                <span>쥬니어네이버 | </span>
+                <span>해피빈</span>
+            </div>
+            <div id="header-search">
+                <!--가운데 정렬용 div-->
+                <a href="https://www.naver.com" style="text-decoration: none;">
+                    <h1>네이버</h1>
+                    <!--화면을 이루는 것이기 때문에 body 안에 heading을 적어줌-->
+                </a>
+                <h2 class="blind">검색창</h2>
+                <!--같은 번호일 때에는 중요도가 같은 것임-->
+                <fieldset>
+                    <legend class="blind">검색</legend>
+                    <input>
+                    <span class="search-keyboard"></span>
+                    <span class="search-history"></span>
+                    <button>
+                        <span class="blind">검색</span>
+                        <span id="search-image"></span>
+                        <!--css 쓸 때 부모자식 태그들 쓰는게 너무 길어져서 class 안쓰고 id로 바꿈-->
+                    </button>
+                </fieldset>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="center-align relative">
+            <div id = "search-ranking">
+                <h2 class = "blind">실시간 검색어</h2>
+                <div>
+                    <span id = "rank-number">1</span>
+                    <span id = "rank-title">코딩</span>
+                </div>
+                <div id="real-time-ranking">
+                    <div id="ranking-top">
+                        <div id="incresing">급상승 검색어</div>
+                        <span>현재</span>
+                        <span>전체연령</span>
+                    </div>
+                    <div id="ranking-divide">
+                        <ul>
+                            <li>1~10위</li>
+                            <li>11~20위</li>
+                        </ul>
+                    </div>
+                    <div id="ranking">
+                        <ul>
+                            <li>
+                                <span class="rank-number">1</span>
+                                <span class="rank-title">코딩</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">2</span>
+                                <span class="rank-title">깨누</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">3</span>
+                                <span class="rank-title">개누</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">4</span>
+                                <span class="rank-title">까누</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">5</span>
+                                <span class="rank-title">소카누</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">6</span>
+                                <span class="rank-title">누카소</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">7</span>
+                                <span class="rank-title">꺄누</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">8</span>
+                                <span class="rank-title">카소</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">9</span>
+                                <span class="rank-title">누</span>
+                            </li>
+                            <li>
+                                <span class="rank-number">10</span>
+                                <span class="rank-title">카누</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div id = "z-example">
+                            <div id = "z-inner"></div>
+                        </div> -->
+                    <div id="ranking-line"></div>
+                    <div id="ranking-date">
+                        <div id="date">2022.09.21. 1:12 기준</div>
+                        <div id="help-image"></div>
+                        <div id="tracking">DataLab. 급상승 트래킹 &gt;</div>
+                    </div>
+                </div>
+            </div>
+            <ul id = "nav-menu">
+                <!--unordered list-->
+                <li>
+                    <a href="">
+                        <span class="nav-item-mail"></span>
+                        <span class="blind">메일</span>
+                    </a>
+                </li>
+                <!--list item-->
+                <li><a href=""><span></span><span class="blind">카페</span></a></li>
+                <!--list item-->
+                <li><a href=""><span></span><span class="blind">블로그</span></a></li>
+                <!--list item-->
+                <li><a href=""><span></span><span class="blind">지식인</span></a></li>
+                <!--list item-->
+                <li><a href=""><span></span><span class="blind">쇼핑</span></a></li>
+                <!--list item-->
+                <li><a href=""><span></span><span class="blind">네이버페이</span></a></li>
+                <!--list item-->
+                <li><a href=""><span></span><span class="blind">네이버TV</span></a></li>
+                <li><a href=""><span></span><span class="blind">사전</span></a></li>
+                <li><a href=""><span></span><span class="blind">뉴스</span></a></li>
+                <li><a href=""><span></span><span class="blind">증권</span></a></li>
+                <li><a href=""><span></span><span class="blind">부동산</span></a></li>
+                <li><a href=""><span></span><span class="blind">지도</span></a></li>
+                <li><a href=""><span></span><span class="blind">영화</span></a></li>
+                <li><a href=""><span></span><span class="blind">뮤직</span></a></li>
+                <li><a href=""><span></span><span class="blind">책</span></a></li>
+                <li><a href=""><span></span><span class="blind">웹툰</span></a></li>                
+            </ul>
+            <div class = "nav-divider"></div>
+            <ul id = "more">
+                <li><a href=""><span></span><span class="blind">더보기</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div id = "main-centered" class="center-align">
+            <div id = "main-first-block">
+                <section id = "main-ad">
+                    <a href = "https://m.sports.naver.com/community/opentalk/index?pcode=naver_timeboard_last">
+                        <h3 class = "blind">광고</h3>
+                        <img src = "./main-first-block ad.jpg"/>
+                    </a>
+                </section>     <!--주목, section은 블록 단위로 나누어져 있는 부분에 적용하기 좋음, section을 적용시켜준 아래에는 heading tag를 blind 속성으로 넣어주는 것이 좋다.-->
+                <section id="main-login">      <!--주목-->
+                    <h3 class="blind">로그인</h3>     
+                    <div class="login-wrapper">     
+                        <span class="login-text">네이버를 더 안전하고 편리하게 이용하세요.</span>     
+                        <a href="https://nid.naver.com/nidlogin.login?mode=form&amp;url=https%3A%2F%2Fwww.naver.com" id="margintop">     
+                            <span class="blind">Naver 로그인</span>     
+                            <span class="login-image"></span>     
+                        </a>     
+                        <a class="login-signup" href="https://nid.naver.com/user2/V2Join?m=agree&amp;lang=ko_KR&amp;cpno=">회원가입</a>
+                    </div>
+                </section>
+            </div>
+            <div id="main-second-block">
+                <div class = "float-left">
+                    <section id="main-ytn">      <!--주목-->
+                        <h3>연합뉴스</h3>
+                        <ol>
+                            <li>충격) 카누가 입질함...</li>
+                        </ol>
+                    </section>
+                    <section id="main-newsstand">     <!--주목-->
+                        <h3>뉴스스탠드</h3>
+                        <ul>
+                            <li><img src="./과학동아.png" alt="과학동아" /></li>
+                            <li><img src="./한국일보.png" alt="한국일보" /></li>
+                            <li><img src="./osen.png" alt="osen" /></li>
+                            <li><img src="./매일경제.png" alt="매일경제" /></li>
+                            <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+                            <div class="size-control">
+                                <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+                                <li><img src="./맥스무비.png" alt="맥스무비" /></li>
+                                <li><img src="./시사위크.png" alt="시사위크" /></li>
+                                <li><img src="./이데일리.png" alt="이데일리" /></li>
+                                <li><img src="./donga logo.png" alt="동아일보" /></li>
+                                <li><img src="./이코노미조선.png" alt="이코노미조선" /></li>
+                                <li><img src="./전자신문.png" alt="전자신문" /></li>
+                                <li><img src="./조이뉴스24.png" alt="조이뉴스24" /></li>
+                                <li><img src="./지디넷코리아.png" alt="지디넷코리아" /></li>
+                                <li><img src="./채널A.png" alt="채널A" /></li>
+                                <li><img src="./코리아헤럴드.png" alt="코리아헤럴드" /></li>
+                                <li><img src="./한겨례.png" alt="한겨례" /></li>
+                                <li><img src="./EBN.png" alt="EBN" /></li>
+                            </div>
+                        </ul>
+                    </section>
+                </div>
+                <div class = "float-left">
+                    <section id= "main-stock">
+                        <span>증시</span>
+                        <span>|</span>
+                        <span>다우</span>
+                        <span>31,946.38</span>
+                        <span>▾ 201.38 -0.63%</span>
+                        <div id = "main-stock-previous">
+                            <span></span>
+                        </div>
+                        <div id = "main-stock-next">
+                            <span></span>
+                        </div>
+                    </section>     <!--주목-->
+                    <section id="main-second-ad">
+                        <a href="https://www.prugio.com/ht/2022/pungmucity/">
+                            <h3 class="blind">광고</h3>
+                            <img src="./main-second-block ad.jpg" />
+                        </a>
+                    </section>     <!--주목-->
+                </div>
+            </div>
+            <div id="main-third-block">
+                <section id="main-category">     <!--주목-->
+                    <h3 class="blind">주제별 보기</h3>
+                    <div id="main-category-top">
+                        <button id="subject-all">
+                            <!--맨 왼쪽 버튼 하나 -->
+                            <span class="blind">전체 주제 열기</span>
+                            <span></span>
+                        </button>
+                        <div id="subject-list">
+                            <!--가운데 가로 목록 하나-->
+                            <div class = "opacity left"></div>     <!-- 주목, 맨 왼쪽에 <li> 요소가 가려지는 부분에 그림자 같은 효과를 주기 위해 생성해 보았음, class가 2개인 것!-->
+                            <ul>
+                                <li>리빙</li>
+                                <li>푸드</li>
+                                <li>스포츠</li>
+                                <li class = "highlight">자동차</li>     <!-- 주목!, 건강 부분이 클릭되어 있는 것 같은 효과를 줄 것임.-->
+                                <li>패션뷰티</li>
+                                <li>부모i</li>
+                                <li>건강</li>     
+                                <li>웹툰</li>
+                                <li>게임</li>
+                                <li>TV연예</li>
+                                <li>뮤직</li>
+                                <!-- <li>영화</li>     주목, 강사의 main-category block의 width보다 나의 width가 더 작기 때문에 영화와
+                                <li>책문화</li>        책문화를 포함하면 CSS에서 white-space를 적용할 때 오른쪽으로 넘친다. 따라서 이 2개는 지워주기-->
+                            </ul>
+                            <div class = "opacity right"></div>     <!-- 주목, 맨 오른쪽에 <li> 요소가 가려지는 부분에 그림자 같은 효과를 주기 위해 생성해 보았음, 여기도 역시 class가 2개인 것! 헷갈리지 않기!-->
+                        </div>
+                        <button id="subject-prev">
+                            <!--두번째 버튼 하나-->
+                            <span class="blind">이전 주제</span>
+                            <span></span>
+                        </button>
+                        <button id="subject-next">
+                            <!--맨 오른쪽 버튼 하나-->
+                            <span class="blind">다음 주제</span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div id = "category-content-top">
+                        <div id = "content-left">
+                            <a href = "https://mycar.naver.com/apply?promo=main_pc">
+                                <img src="./car_score_ad.png"/>
+                                <span>네이버 마이카 오너평가</span>
+                                <span>'내 차는 내가 평가한다!'</span>
+                                <span>오너 평가 하면 ! 네이버페이 포인트 500원을 적립</span>
+                                <span>네이버 MY CAR</span>
+                            </a>
+                        </div>
+                        <div id = "content-right">
+                            <div></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="main-shopping">     <!--주목-->
+                    <h3 class = "blind">쇼핑</h3>
+                    <iframe src="https://castbox.shopping.naver.com/shopbox/main.nhn?"></iframe>     <!--주목, frameborder = "0", scrolling = "no" 없애기, vaildator tool로 점검한 것-->
+                </section>
+            </div>
+            <div id = "main-fourth-block">
+                <section id = "main-event">     <!--주목-->
+                    <h3>이벤트</h3>
+                </section>   
+                <section id = "main-third-ad">
+                    <h3 class = "blind">광고</h3>
+                </section>     <!--주목-->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>공지사항</div>
+        <div>Creators</div>
+        <div>회사소개</div>
+    </footer>
+</body>
+
+</html>

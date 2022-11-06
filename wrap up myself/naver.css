@@ -1,0 +1,884 @@
+/* 선택자(selector) */
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+
+h1, h2,h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.float-left {
+    float: left;
+}
+
+#fixed {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.blind {                  /*'.blind'에서 '.'은 class를 의미, 'blind'는 class 이름을 의미함. 클래스 이름은 앞의 html에서 'class = "blind' 이런 식으로 미리 정의해 줌.*/
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}  
+
+header {
+    height: 180px;
+}
+
+.center-align {
+    margin: 0 auto;
+    width: 1080px;   
+}   /*속성명 1: 속성값 1; 속성명 2: 속성값 2;*/
+
+.relative {
+    position: relative;
+}
+
+#header-top {
+    float: right;
+    margin-top: 8px;
+}
+
+#header-top span {               /* nth child 대신에 class를 사용하는 것이 더 작업하기에 좋다. */
+    color: #888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+#header-search{
+    clear: both;
+    padding-top: 45px;
+}
+
+#header-search h1 {               /* id의 경우 #을 적어주어야 한다. */
+    width: 222px;
+    height: 52px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png); 
+    background-size: 457px 434px;
+    background-position: 0px -158px;
+    text-indent: -50%;         /*text-indent와 overflow는 접근성을 위해 작성한 코드!(장애인 위함)*/  
+    overflow: hidden;           
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -5px;
+    right: 2px;
+    left: 1px;
+    clear: both;
+}          /*div#header-center h1 으로 작성하는 것도 가능(손주 태그로서)*/
+
+#header-search > h2 {
+    display: none;
+}
+
+#header-search fieldset {
+    margin-left: 18px;
+    padding: 12px 0 12px 10px;
+    width: 578.97px;
+    height: 55.97px;
+    display: inline-block;
+    border: 2px solid #03cf5d;
+    vertical-align: middle;
+    position: relative;
+}
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
+    width: 444px;
+    height: 24px;
+    display: inline-block;
+}
+
+.search-keyboard {
+    background-image: url(NAVER\ background\ image\ 1.png);
+    background-repeat: no-repeat;
+    background-size: 457px 434px;
+    background-position: -420px -402px;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin: 8px 0 0 7px;
+}
+
+.search-history {
+    background-image: url(NAVER\ background\ image\ 1.png);
+    display: inline-block;
+    width: 10px;
+    height: 8px;
+    background-position: -408px -100px;
+    background-repeat: no-repeat;
+    background-size: 457px 434px;
+    margin: -2px 0 0 6px;
+}
+
+#header-search fieldset button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+    position: absolute;
+    right: -4px;
+    top: -2px;
+}
+
+#search-image {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
+    background-size: 457px 434px;
+    background-position: -420px 0;
+    background-repeat: no-repeat; 
+    width: 22px; 
+    height: 22px;
+    display: inline-block;
+    margin: 14px;
+}
+
+nav {
+    height: 46px;
+    border-top: 1px solid #f1f3f6;
+    border-bottom: 1px solid #d1d8e4;
+}
+
+nav ul {               /* class나 id 같은 경우가 아니면 특수문자 없이 적어주면 됨. */
+    margin: 0;
+    list-style: none;
+    padding: 16px 0 0 4px;
+    display: inline-block;
+}
+
+#nav-menu li {
+    display: inline-block;
+}
+
+#nav-menu li:first-child span.nav-item-mail {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0px;
+}
+
+#nav-menu li span:first-child {
+    height: 16px;
+    background-image: url(sp_nav.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#nav-menu li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+#nav-menu li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+#nav-menu li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+#nav-menu li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+#nav-menu li:nth-child(6) span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
+}
+
+#nav-menu li:nth-child(7) span:first-child {
+    width: 35px;
+    background-position: -125px -130px;
+}
+
+#nav-menu li:nth-child(8) span:first-child {
+    width: 28px;
+    background-position: -279px -208px;
+}
+
+#nav-menu li:nth-child(9) span:first-child {
+    width: 28px;
+    background-position: -128px -104px;
+}
+
+#nav-menu li:nth-child(10) span:first-child {
+    width: 28px;
+    background-position: -36px -259px;
+}
+
+#nav-menu li:nth-child(11) span:first-child {
+    width: 41px;
+    background-position: -151px -156px;
+}
+
+#nav-menu li:nth-child(12) span:first-child {
+    width: 28px;
+    background-position: -280px -130px;
+}
+
+#nav-menu li:nth-child(13) span:first-child {
+    width: 28px;
+    background-position: -234px -233px;
+}
+
+#nav-menu li:nth-child(14) span:first-child {
+    width: 28px;
+    background-position: -72px -259px;
+}
+
+#nav-menu li:nth-child(15) span:first-child {
+    width: 13px;
+    background-position: -140px -78px;
+}
+
+#nav-menu li:nth-child(16) span:first-child {
+    width: 26px;
+    background-position: -279px 0;
+}
+
+.nav-divider {
+    display: inline-block;
+    margin: 18px 20px 0 6px;
+    width: 1px;
+    height: 14px;
+    background: #ebeef3;
+}
+
+#more li span:first-child {
+    width: 55px;
+    background-position: 0 -104px;
+    margin-left: -18px;
+}
+
+#search-ranking {
+    position: absolute;
+    top: 14px;
+    right: 0;
+    width: 198px;
+    height: 20px;
+}
+
+#real-time-ranking {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 17px;
+    width: 332px;
+    height: 334px;
+    border: 1px solid #aaa;
+    background: white;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    z-index: 100;     /* search-ranking의 z-index에 아래의 1보다 더 높은 100을 부여해 주었으므로 아래의 z-example(노란 네모 박스)보다 더
+                    위에 (실시간 검색어 창이) 나타나야 한다. */
+}
+
+#search-ranking:hover      /* real-time-ranking(자식 element)뿐만 아니라 search-ranking(부모 element)를 같이 적어 주어야 hover가 제대로 작동 */
+#real-time-ranking {       /* 어디에 마우스를 대어야 display: none 처리된 창이 보일지 알아야 하지 때문 */
+    display: inline-block;
+}
+
+/* #z-example {
+    position: absolute;
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+} */
+
+/* #z-inner {          빨간색과 노란색은 자식, 부모 관계이고 노란색과 실시간 검색어 창은 형제 관계이다.
+    position: absolute;     z-index 값만 놓고 보면 노란색, 실시간 검색어 창, 빨간색 순으로 쌓이겠지만 실제로는 실시간 검색어 창이 가장 위고 
+    background: red;      그 아래에 노란색 위에 빨간색이 있다. 이는 "쌓임 맥락" 에 의한 것! 
+    width: 50px;     자식이 아무리 z-index가 높아도 그의 부모의 z-idnex가 부모의 형제들보다 낮다면 자식은 부모를 따라감(자식이 부모 이길 수 없음.)        
+    height: 50px;          MDN에서 즐겨찾기 해 놓아야 할 것: block format context, containing block, 쌓임 맥락, margin collapsing
+    z-index: 1000;
+}  z-index를 여기에서 쓸 일은 없지만 팝업 창 등을 띄워야 할 때 사용할 수 있음 */ 
+
+#incresing,
+#ranking-top span {
+    display: inline-block;
+}
+
+#ranking-top span {
+    float: right;
+    font-size: 13px;
+    color: #888;
+    margin-left: 15px;
+}
+
+#ranking-divide ul {
+    padding: 16px 0 0 2px;
+}
+
+#ranking-divide li {
+    float: left;
+    border: 1px solid #aaa;
+    width: 146px;
+    text-align: center;
+    background-color: #f1f3f6;
+}
+
+#ranking-divide li:nth-child(2) {
+    border-left: 0;
+}
+
+#ranking ul {
+    padding: 6px 0 0 4px;
+}
+
+#ranking li {
+    padding-bottom: 6px;
+    font-size: 14px;
+}
+
+#rank-number {
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
+}
+
+#rank-title {
+    letter-spacing: -1px;
+    font-size: 14px;
+}
+
+#ranking-line {
+    border-top: 1px solid #f1f3f6;
+    width: 296px;
+}
+
+#date {
+    font-size: 11px;
+    float: left;
+    padding-top: 7px;
+}
+
+#tracking {
+    font-size: 11px;
+    float: right;
+    padding-top: 7px;
+}
+
+#help-image {
+    background-image: url(물음표.png);
+    width: 18px;
+    height: 20px;
+    margin: 4px 0 0 3px;
+    float: left;
+}
+
+#tracking {
+    padding-left: 15px;
+}
+
+main {
+    background-color: #f2f4f7;
+    display: inline-block;
+    width: 100%;
+}
+
+/* main h3:nth-of-type(2) {
+    background-color: red;
+} */
+
+#main-centered {
+    padding: 8px 10px 0;
+    width: 1100px;
+}
+
+#main-first-block {
+    display: inline-block; 
+    width: 100%;
+    vertical-align: top;
+}
+
+#main-ad {
+    width: 740px;
+    height: 120px;
+    background: #555;
+    vertical-align: top;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    float: left;         /* 밑줄 무시 가능, display: inline-block을 삭제해주면 밑줄 사라짐. */
+}
+
+#main-ad img {
+    width: 740px;
+    height: 120px;
+}
+
+#main-login {
+    width: 332px;
+    height: 120px;
+    background: white;
+    vertical-align: top;
+    margin-bottom: 8px;
+    float: left;
+}
+
+#main-login .login-wrapper {     
+    padding: 15px 25px;
+}
+
+#main-login .login-wrapper a{     
+    display: block;
+    /*margin-top: 12px;     회원가입 부분 설명 읽기*/    
+}
+
+#margintop {
+    margin-top: 12px;     /*Naver 로그인에만 margin-top이 적용되게 해줌.*/
+}
+
+#main-login .login-text {     
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#main-login .login-image {     
+    background: url(./sp_login.png) 0 -47px no-repeat;
+    width: 280px;
+    height: 37px;
+    display: inline-block;
+}
+
+#main-login .login-signup {
+    float: right;
+    font-size: 12px;     /* 여기서부터 text-decoration까지 <a>의 기본 스타일을 바꾸어 주기 위한 코드 */
+    line-height: 38px;    
+    color: #666; 
+    text-decoration: none;     /* 글자 밑에 있는 밑줄을 없애줌 */
+/* 위에서 .login-wrapper에 margin-top 12px 때문에 CSS가 겹치는 현상이 일어남. 회원가입 부분에도 margin-top: 12px가
+부여되는데 이를 막기 위해 여기다가는 margin-top: 0을 적어줄 수 있다고 생각하겠지만 CSS 우선순위가 선택자가 더 많은 위의것이 우선이기 때문에 
+적용이 안됨.*/
+}
+
+#main-login .login-signup:hover {
+    text-decoration: underline;     /* 회원가입 글자 위에 마우스를 올렸을 때 밑줄이 보임 */
+}
+
+#main-second-block {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 8px;
+    vertical-align: top;
+}
+
+#main-second-block .float-left:first-child {
+    width: 740px;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+#main-ytn h3, #main-newsstand h3 {     /* 주목, '연합뉴스'와 '뉴스스탠드'의 글씨체가 바뀜 */
+    font-size: 14px;
+    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+    /* line-height: 45px;     글자만 있다면 line-height로 글자가 위치할 높이를 조절할 수 있지만 아이콘 등이 같이 들어간다면 그다지 좋은 선택 X */
+    padding-top: 15px;     /* 위와 같은 경우 차라리 padding을 부여해 주는 것이 더 나음. */
+    padding-left: 15px;
+}
+
+#main-ytn {
+    display: inline-block;
+    width: 740px;
+    height: 46px;
+    background: white;
+    margin-bottom: 8px; 
+    margin-right: 8px;
+}
+
+#main-ytn h3, #main-ytn ol {
+    display: inline-block;
+    vertical-align: top;     /* 주목 */
+}
+
+#main-newsstand {
+    display: inline-block;
+    width: 740px;
+    height: 246px;
+    background: white;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+#main-newsstand h3 {
+    height: 45px;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#main-newsstand ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+#main-newsstand li {
+    float: left;
+    width: calc(100% / 6);
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid#f1f3f6;
+    text-align: center;     /* 내부 컨텐츠 가운데 정렬 */
+}
+
+#main-newsstand li img {
+    position: relative;
+    top: 50%;     /* 자신의 현재 위치에서 50% 아래로 내려옴 */
+    transform: translateY(-50%);
+}
+
+.size-control li img {
+    width: 45px;
+    height: 24px;
+}
+
+#main-second-block .float-left:last-child {
+    width: 332px;
+    vertical-align: top;
+}
+
+#main-stock {
+    display: inline-block;
+    width: 332px;
+    height: 46px;
+    background: white;
+    margin-bottom: 8px;
+    vertical-align: top;
+}
+ 
+#main-stock span {
+    float: left;
+    font-size: 13px;
+    padding-top: 15px;
+}
+
+#main-stock span:first-child,
+#main-stock span:nth-child(4) {
+    font-weight: 700; 
+}
+
+#main-stock span:first-child {
+    padding-left: 13px;
+}
+
+#main-stock span:nth-child(2) {
+    color: #d1d8e4;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#main-stock span:nth-child(3) {
+    padding-right: 8px;
+}
+
+#main-stock span:nth-child(5) {
+    padding-left: 8px;
+    padding-top: 15px;
+}
+
+#main-stock span:nth-child(5),
+#main-stock span:last-child {
+    color: #1E90FF;
+}
+
+#main-stock span:last-child {
+    font-size: 13px;
+}
+
+#main-stock-previous,
+#main-stock-next {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border: 1px solid #ebeef3;
+    position: relative;
+    margin: 11.5px 0 11.5px;
+}
+
+#main-stock-previous {
+    left: 18px;
+}
+
+#main-stock-previous span {
+    background-image: url(./sp_themecast.png);
+    background-position: -314px 3px;
+    width: 15px;
+    height: 20px;
+}
+
+#main-stock-next {
+    left: 12px;
+}
+
+#main-stock-next span {
+    background-image: url(./sp_themecast.png);
+    background-position: -313px -49px;
+    width: 20px;
+    height: 20px;
+}
+
+#main-second-ad {
+    display: inline-block;
+    width: 332px;
+    height: 246px;
+    background: #555;
+    vertical-align: top;
+}
+
+#main-second-ad img {
+    width: 332px;
+    height: 246px;
+}
+
+#main-third-block,
+#main-fourth-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 8px;
+}
+
+#main-category {
+    float: left;
+    width: 722px;
+    height: 1525px;
+    background: white;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+#main-shopping {
+    float: left;
+    width: 332px;
+    height: 1525px;
+    background: white;
+}
+
+iframe {
+    width: 115%;
+    height: 100%;
+    border: none;
+}
+
+#main-event {
+    float: left;
+    width: 740px;
+    height: 130px;
+    background: white;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+#main-third-ad {
+    float: left;
+    width: 330px;
+    height: 130px;
+    background: #555;
+}
+
+#main-category-top {     
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#subject-list, #subject-all, #subject-prev, #subject-next {     
+    float: left;
+    height: 45px;
+}
+
+#subject-list {     
+    width: 587px;
+    position: relative;     /* 주목, 아래의 opacity left와 right와 연관되어 있음. 옆처럼 해야지 containing block이 되고 이것을 기준으로 position: relative가 들어가기 때문이다. */
+}
+
+#subject-list ul {     
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;     /* 주목, 연속된 공백과 줄 바꿈은 메꾸어져서 하나의 공백으로 표시, 공백을 채우지만 가로로 긴 줄에서도 줄 바꿈을 하지 않고 표시, 사실 여기에서는 안해도 상관 X */
+    overflow: hidden;     /* 주목, 넘치는 것들을 감추기 위해 사용 */
+    height: 45px;     /* 주목, height를 border-bottom에 딱 맞는 45px로 주면 아래에 남는 공간이 없어 아래로 접힌 <li> 요소들이 위로 올라가게 된다. */
+    width: 700px;     /* 주목, TV 부분이 자연스럽게 가려질 수 있을 만큼 ul 부분의 width를 설정 */
+}
+
+#subject-list li {     
+    float: left;
+    margin-right: 10px;     /* 주목 */
+    padding: 14px 7px 0;     /* 주목 , 옆처럼 작성하고 나면 li요소들이 넘쳐서 아래까지 내려가는 것을 볼 수 있다. 해결은 위 ul 코드를 참고 */
+    font-weight: 700px;     /* 주목 */
+    font-size: 14px;     /* 주목 */
+    font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;     /* 주목 */
+}
+
+.opacity {
+    opacity: 0.5;     /* 주목, opacity는 0(투명)이상 1(불투명)이하의 숫자로 불투명도를 나타냄. 그리고 opacity는 쌓임 맥락을 형성함. */ 
+    background: white;     /* 주목, 이 색깔을 넣어주어야 ul의 오른쪽과 왼쪽 끝이 글자를 살짝 반투명하게 가리는 것을 볼 수 있음. */
+}
+
+.left {
+    position: absolute;     /* 주목 */
+    left: 0;     /* 주목 */
+    top: 0;     /* 주목 */
+    height: 45px;     /* 주목 */
+    width: 15px;     /* 주목 */
+}
+
+.right {
+    position: absolute;     /* 주목 */
+    right: 0;     /* 주목 */
+    top: 0;     /* 주목 */
+    height: 45px;     /* 주목 */
+    width: 15px;     /* 주목 */
+}
+
+#subject-list li.highlight {
+    border-bottom: 3px solid #00c73c;     /* 주목 */
+    color: #00b336;     /* 주목 */
+    height: 45px;     /* 주목, 3px의 초록색 밑줄의 위치를 조정해 줌. */
+    font-weight: 700;     /* 주목, 글자의 굵기를 조정한다. 일반적인 굵기는 400, 얇게 하고 싶으면 보통은 100정도, 굵게 하고 싶으면 보통은 700정도를 적음. */
+}
+
+#subject-all, #subject-prev, #subject-next {      
+    width: 45px;
+    background: white;
+    border: none;          /* border를 없앤 후에 */
+    border-left: 1px solid #ebeef3;          /* border-left만 적용시키는 식으로 border를 두번 적어도 가능 */
+    position: relative;
+    padding: 0;     /* 주목, 필요하지 않은 padding 없애주기 */
+}
+
+#subject-all {
+    border-right: 1px solid #ebeef3;     /* 주목, 순서를 이렇게 해야지 화면상에 적용이 됨. */
+}
+
+#subject-all span:last-child {      
+    background-position: -218px -257px;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 14px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 3px;
+}
+
+#subject-prev span:last-child {      
+    background-position: -320px 0;
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+}
+
+#subject-next span:last-child {       
+    background-position: -320px -52px;
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 8px;
+    height: 16px;
+    background-image: url(./sp_themecast.png);
+    background-repeat: no-repeat;
+}
+
+#content-left {
+    width: 361px;
+    height: 361px;
+    display: inline-block;
+}
+
+#content-left a {      /* span에다가 적용해주면 구현이 안됨. a tag가 지니고 있는 특성이기 때문에 이를 없애줘야 하므로 */    
+    text-decoration: none;
+}
+
+#content-left img {
+    width: 340px;
+    height: 168.1px;
+    left: 10px;
+    top: 15px;
+    border: 1px solid #ebeef3;
+    position: relative;
+}
+
+#content-left span {
+    display: block;
+    padding-left: 13px;
+}
+
+#content-left span:nth-child(2) {     /* first-child가 아니라 nth-child(2)임! 위에 a tag가 있어서 first-child 하면 안먹음 */
+    color: #1E90FF;
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+#content-left span:nth-child(3) {
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 7px;
+    color: black;     /* 글자 색깔 적어주어야지 클릭해서 링크 타고 이동한 후에 글자색 바뀌지 않음 */
+}
+
+#content-left span:nth-child(3):hover {     /* 이렇게 hover는 따로 적어주어야 위로 밀리지 않음. */
+    text-decoration: underline;
+}
+
+#content-left span:nth-child(4) {
+    padding-top: 9px;
+    font-size: 15px;
+    color: #555;
+    font-weight: 400;
+}
+
+#content-left span:last-child {
+    padding-top: 9px;
+    font-size: 13px;
+    color: #555;
+    font-weight: 400;
+}
+
+#content-right {
+    width: 361px;
+    height: 361px;
+    background-color: #ebeef3;
+    float: right;
+}
+
+#section {
+    border: 1px solid #dee3eb;     /* block 별로 구분선을 더 선명하게 해 줌. */
+}

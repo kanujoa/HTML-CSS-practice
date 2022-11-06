@@ -1,0 +1,20 @@
+/* 선택자(selector) */
+
+div#header-center {
+    margin: 0 auto;
+    width: 1080px;   
+}          /*속성명 1: 속성값 1; 속성명 2: 속성값 2;*/
+
+div#header-search > h1{
+    width: 280px;
+    display: inline-block;
+}          /*div#header-center h1 으로 작성하는 것도 가능(손주 태그로서)*/
+
+div#header-search > h2 {
+    display: none;
+}
+
+div#header-search > fieldset {
+    width: 520px;
+    display: inline-block;
+}

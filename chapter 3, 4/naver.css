@@ -1,0 +1,143 @@
+/* 선택자(selector) */
+* {
+    box-sizing: border-box;
+}
+
+#fixed {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+
+.blind {                  /*'.blind'에서 '.'은 class를 의미, 'blind'는 class 이름을 의미함. 클래스 이름은 앞의 html에서 'class = "blind' 이런 식으로 미리 정의해 줌.*/
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}  
+
+.center-align {
+    margin: 0 auto;
+    width: 1080px;   
+}          /*속성명 1: 속성값 1; 속성명 2: 속성값 2;*/
+
+#header-search h1 {               /* id의 경우 #을 적어주어야 한다. */
+    width: 222px;
+    height: 52px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png); 
+    background-size: 457px 434px;
+    background-position: 0px -158px;
+    text-indent: -50%;         /*text-indent와 overflow는 접근성을 위해 작성한 코드!(장애인 위함)*/  
+    overflow: hidden;           
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -6px;
+    right: 2px;
+}          /*div#header-center h1 으로 작성하는 것도 가능(손주 태그로서)*/
+
+#header-search > h2 {
+    display: none;
+}
+
+#header-search > fieldset {
+    margin-left: 20px;
+    padding: 12px 0 12px 10px;
+    width: 585.97px;
+    height: 55.97px;
+    display: inline-block;
+    border: 2px solid #03cf5d;
+    vertical-align: middle;
+    position: relative;
+}
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
+    width: 444px;
+    height: 24px;
+    display: inline-block;
+}
+
+#header-search fieldset button {
+    width: 56px;
+    height: 56px;
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+    position: absolute;
+    right: -57px;
+    top: -2px;
+}
+
+#search-image {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png);
+    background-size: 457px 434px;
+    background-position: -420px 0;
+    background-repeat: no-repeat; 
+    width: 22px; 
+    height: 22px;
+    display: inline-block;
+}
+
+nav ul {               /* class나 id 같은 경우가 아니면 특수문자 없이 적어주면 됨. */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li span:first-child{
+    height: 16px;
+    background-image: url(sp_nav.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 14px;
+}
+
+nav li:first-child span.nav-item-mail {
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0px;
+}
+
+nav li:nth-child(2) span:first-child {
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child {
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child {
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:last-child span:first-child {
+    width: 25px;
+    background-position: -70px -285px;
+}
+
+
+

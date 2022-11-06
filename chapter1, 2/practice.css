@@ -1,0 +1,18 @@
+div#header-center{
+    margin: 0 auto;
+    width: 1080px;          /* 'px'를 적을 때 숫자와 띄어쓰기 해서 적으면 적용이 안됨! 붙여서 적어야 함..*/
+}
+
+div#header-search > h1{
+    width: 280px;
+    display: inline-block;
+}
+
+div#header-search > h2{
+    display: none;
+}
+
+div#header-search > fieldset{
+    width: 520px;
+    display: inline-block;
+}
