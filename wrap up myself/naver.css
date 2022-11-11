@@ -32,6 +32,10 @@ h1, h2,h3, h4, h5, h6 {
     border-radius: 50px;
 }
 
+#section {
+    border: 1px solid #dee3eb;     /* block 별로 구분선을 더 선명하게 해 줌. */
+}
+
 .blind {                  /*'.blind'에서 '.'은 class를 의미, 'blind'는 class 이름을 의미함. 클래스 이름은 앞의 html에서 'class = "blind' 이런 식으로 미리 정의해 줌.*/
     position: absolute;
     clip: rect(0 0 0 0);
@@ -816,17 +820,18 @@ iframe {
     background-repeat: no-repeat;
 }
 
-#content-left {
+#content-top-left {
     width: 361px;
     height: 361px;
     display: inline-block;
 }
 
-#content-left a {      /* span에다가 적용해주면 구현이 안됨. a tag가 지니고 있는 특성이기 때문에 이를 없애줘야 하므로 */    
+#content-top-left a,
+#content-top-right a {      /* span에다가 적용해주면 구현이 안됨. a tag가 지니고 있는 특성이기 때문에 이를 없애줘야 하므로 */    
     text-decoration: none;
-}
+}     /* 이거 작성하면 '-'이거도 같이 사라짐. */
 
-#content-left img {
+#content-top-left img {
     width: 340px;
     height: 168.1px;
     left: 10px;
@@ -835,50 +840,93 @@ iframe {
     position: relative;
 }
 
-#content-left span {
+#content-top-left span {
     display: block;
     padding-left: 13px;
 }
 
-#content-left span:nth-child(2) {     /* first-child가 아니라 nth-child(2)임! 위에 a tag가 있어서 first-child 하면 안먹음 */
+#content-top-left span:nth-child(2) {     /* first-child가 아니라 nth-child(2)임! 위에 a tag가 있어서 first-child 하면 안먹음 */
     color: #1E90FF;
     font-size: 13px;
     font-weight: 700;
     padding-top: 30px;
 }
 
-#content-left span:nth-child(3) {
+#content-top-left span:nth-child(3) {
     font-size: 15px;
     font-weight: 700;
     padding-top: 7px;
     color: black;     /* 글자 색깔 적어주어야지 클릭해서 링크 타고 이동한 후에 글자색 바뀌지 않음 */
 }
 
-#content-left span:nth-child(3):hover {     /* 이렇게 hover는 따로 적어주어야 위로 밀리지 않음. */
+#content-top-left span:nth-child(3):hover {     /* 이렇게 hover는 따로 적어주어야 위로 밀리지 않음. */
     text-decoration: underline;
 }
 
-#content-left span:nth-child(4) {
+#content-top-left span:nth-child(4) {
     padding-top: 9px;
     font-size: 15px;
     color: #555;
     font-weight: 400;
 }
 
-#content-left span:last-child {
+#content-top-left span:last-child {
     padding-top: 9px;
     font-size: 13px;
     color: #555;
     font-weight: 400;
 }
 
-#content-right {
+#content-top-right {
     width: 361px;
     height: 361px;
     background-color: #ebeef3;
     float: right;
+    padding-right: 110px;
 }
 
-#section {
-    border: 1px solid #dee3eb;     /* block 별로 구분선을 더 선명하게 해 줌. */
+#car-first-main-post img{
+    width: 100.3px;
+    height: 100.3px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ebeef3;
+}
+
+#car-first-main-post span {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    top: -72px;
+}
+
+#car-first-main-post img {
+    top: 10px;   
+}
+
+#car-first-main-post span:nth-child(2) {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1E90FF;
+    bottom: 88px;
+    left: 7px;
+}
+
+#car-first-main-post span:nth-child(3) {
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    bottom: 83px;
+    left: 112px;
+}
+
+#car-first-main-post span:nth-child(3):hover {
+    text-decoration: underline;
+}
+
+#car-first-main-post span:last-child {
+    font-size: 13px;
+    color: #555;
+    bottom: 80px;
+    left: 112px;
 }
