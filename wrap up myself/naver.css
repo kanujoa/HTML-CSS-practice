@@ -880,7 +880,6 @@ iframe {
 #content-top-right {
     width: 361px;
     height: 361px;
-    background-color: #ebeef3;
     float: right;
     padding-right: 110px;
 }
@@ -897,11 +896,11 @@ iframe {
     display: inline-block;
     text-decoration: none;
     position: relative;
-    top: -72px;
+    top: -68px;
 }
 
 #car-first-main-post img {
-    top: 10px;   
+    top: 14px;   
 }
 
 #car-first-main-post span:nth-child(2) {
@@ -918,6 +917,7 @@ iframe {
     font-size: 15px;
     bottom: 83px;
     left: 112px;
+    top: -65px;
 }
 
 #car-first-main-post span:nth-child(3):hover {
@@ -929,4 +929,101 @@ iframe {
     color: #555;
     bottom: 80px;
     left: 112px;
+    top: -62px;
+}
+
+#car-second-main-post img {
+    display: inline-block;
+    width: 100.3px;
+    height: 100.3px;
+    position: relative;
+    top: -50px;
+    border: 1px solid #ebeef3;
+}
+
+#car-second-main-post span {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+}
+
+#car-second-main-post span:nth-child(2) {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1E90FF;
+    bottom: 88px;
+    left: 7px;
+    top: -133px;
+}
+
+#car-second-main-post span:nth-child(3) {
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    bottom: 83px;
+    left: 112px;
+    top: -130px;
+}
+
+#car-second-main-post span:nth-child(3):hover {
+    text-decoration: underline;
+}
+
+#car-second-main-post span:last-child {
+    font-size: 13px;
+    color: #555;
+    bottom: 80px;
+    left: 112px;
+    top: -125px;
+}
+
+#car-third-main-post img {
+    display: inline-block;
+    position: relative;
+    width: 100.3px;
+    height: 100.3px;
+    top: -79px;
+    border: 1px solid #ebeef3;
+}
+
+#car-third-main-post span {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;   
+}
+
+#car-third-main-post span:nth-child(2) {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1E90FF;
+    bottom: 88px;
+    left: 113px;
+    top: -178px;   
+}
+
+#car-third-main-post span:nth-child(3) {
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    bottom: 83px;
+    left: 113px;
+    top: -173px;
+}
+
+#car-third-main-post span:nth-child(3):hover {
+    text-decoration: underline;
+}
+
+#car-third-main-post span:last-child {
+    font-size: 13px;
+    color: #555;
+    bottom: 80px;
+    left: 112px;
+    top: -168px;    
+}
+
+#content-top-divider {
+    width: 722px;
+    height: 0.7px;
+    background-color: #ebeef3;
 }
